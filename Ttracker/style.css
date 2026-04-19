@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+:root {
+    /* cores */
+    --var01: #4361ee;
+    --var02: #ffffff;
+
+/* fonte */
+    --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #0f0f1a;
+}
+
+header {
+    background-color: #0c172b;;
+    max-width: 100%;
+    max-height: 300px;
+    padding: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > div {
+    display: flex;
+}
+
+#titulo-header {
+    font-family: var(--font);
+    color: var(--var01);
+    font-size: 1.5em;
+}
+
+#barraDePesquisa{
+    border-radius: 10px;
+    margin-right: 10px;
+    padding-left: 5px;
+    background-color: #0c172b;
+    border: solid 0.5px gray;
+}
+
+#tema {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0c172b;
+    border: solid 0.5px gray;
+
+
+}
