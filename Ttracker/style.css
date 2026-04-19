@@ -51,6 +51,8 @@ header > div {
     border-radius: 10px;
     background-color: #0c172b;
     border: solid 0.5px gray;
+}
 
-
+header  i {
+    color: white;
 }
