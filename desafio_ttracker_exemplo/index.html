@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TreinoTracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== TOAST DE NOTIFICAÇÃO ===== -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__logo">🏋️ TreinoTracker</h1>
+
+      <div class="header__actions">
+        <!-- Barra de busca -->
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-box__input"
+            placeholder="Buscar exercício..."
+            aria-label="Buscar exercício"
+          >
+        </div>
+
+        <!-- Toggle dark mode -->
+        <button id="themeToggle" class="btn-icon" aria-label="Alternar tema escuro">
+          🌙
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+  <main class="main">
+
+    <!-- ===== SEÇÃO: ESTATÍSTICAS ===== -->
+    <section class="stats" aria-label="Estatísticas dos treinos">
+      <div class="stat-card">
+        <span class="stat-card__value" id="statTotal">0</span>
+        <span class="stat-card__label">Treinos</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value" id="statTime">0 min</span>
+        <span class="stat-card__label">Tempo Total</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value" id="statAvg">0 min</span>
+        <span class="stat-card__label">Média / Treino</span>
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO: FORMULÁRIO ===== -->
+    <section class="form-section" aria-label="Adicionar treino">
+      <h2 class="form-section__title">Novo Treino</h2>
+
+      <form id="workoutForm" class="workout-form" novalidate>
+        <div class="workout-form__fields">
+          <div class="form-group">
+            <label for="exerciseName">Exercício</label>
+            <input
+              type="text"
+              id="exerciseName"
+              placeholder="Ex: Corrida, Supino..."
+              required
+              maxlength="50"
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="exerciseType">Tipo</label>
+            <select id="exerciseType" required>
+              <option value="">Selecione</option>
+              <option value="cardio">🏃 Cardio</option>
+              <option value="forca">💪 Força</option>
+              <option value="flexibilidade">🧘 Flexibilidade</option>
+              <option value="hiit">🔥 HIIT</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="exerciseDuration">Duração (min)</label>
+            <input
+              type="number"
+              id="exerciseDuration"
+              placeholder="30"
+              min="1"
+              max="600"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="exerciseDate">Data</label>
+            <input type="date" id="exerciseDate" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn--primary">
+          ➕ Adicionar Treino
+        </button>
+      </form>
+    </section>
+
+    <!-- ===== SEÇÃO: FILTROS ===== -->
+    <section class="filters" aria-label="Filtros de treino">
+      <div class="filters__group">
+        <button class="filter-btn filter-btn--active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="cardio">🏃 Cardio</button>
+        <button class="filter-btn" data-filter="forca">💪 Força</button>
+        <button class="filter-btn" data-filter="flexibilidade">🧘 Flex</button>
+        <button class="filter-btn" data-filter="hiit">🔥 HIIT</button>
+      </div>
+
+      <div class="filters__sort">
+        <label for="sortSelect">Ordenar:</label>
+        <select id="sortSelect">
+          <option value="date-desc">Mais recentes</option>
+          <option value="date-asc">Mais antigos</option>
+          <option value="duration-desc">Maior duração</option>
+          <option value="duration-asc">Menor duração</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- ===== SEÇÃO: LISTA DE TREINOS ===== -->
+    <section class="workouts" aria-label="Lista de treinos">
+      <div id="workoutList" class="workout-list">
+        <!-- Cards inseridos via JavaScript -->
+      </div>
+
+      <!-- Mensagem quando não há treinos -->
+      <div id="emptyState" class="empty-state">
+        <p>🏋️ Nenhum treino registrado ainda.</p>
+        <p>Adicione seu primeiro treino acima!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>TreinoTracker &copy; 2026 &mdash; Feito com 💪 e JavaScript puro</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

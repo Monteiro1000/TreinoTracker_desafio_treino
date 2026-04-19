@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6b1def395a.js" crossorigin="anonymous"></script>
+    <title>Treino Tracker</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo-header">
+            Treino Tracker
+        </h1>
+
+        <input type="text" name="" id="barraDePesquisa" placeholder="Buscar exercicio">
+
+        <button id="tema">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+    </header>
+
+    <main>
+        
+        <section id="dados">
+            <div id="treinos"> 
+                <p class="quantidade">0</p>
+                <p class="especificacao">TREINOS</p>
+            </div>
+
+            <div id="tempo-total">
+                <p class="quantidade">0 min</p>
+                <p class="especificacao">TEMPO TOTAL</p>
+            </div>
+
+            <div id="media-treino">
+                <p class="quantidade">0 min</p>
+                <p class="especificacao">MÉDIA/TREINO</p>
+            </div>
+        </section>
+
+
+        <section id="add-treinos">
+
+            <label for="iexercicio">Exercício</label>
+            <input type="text" name="exercicio" id="iexercicio" placeholder="Ex: Corrida, Supino...">
+
+            <label for="tipo">Tipo</label>
+            <select name="" id="tipo">
+                <option value="">Selecione</option>
+                <option value="cardio">Cardio</option>
+                <option value="forca">Força</option>
+                <option value="flexibilidade">Flexibilidade</option>
+                <option value="hiit">Hiit</option>
+            </select>
+
+            <label for="duracao">Duração (min)</label>
+            <input type="number" name="" id="duracao" placeholder="30">
+
+            <label for="data">Data</label>
+            <input type="date" name="" id="data">
+
+
+            <button id="adicionar"> <i class="fa-solid fa-list-check"></i> Adicionar Treino</button>
+
+
+        </section>
+
+        <section id="filtro">
+
+            <div id="grupo_filtro">
+                <button id="filtro-item">Todos</button>
+                <button id="filtro-item">Cardio</button>
+                <button id="filtro-item">Força</button>
+                <button id="filtro-item">Flex</button>
+                <button id="filtro-item">HIIT</button>
+            </div>
+
+            <div id="ordenacao">
+                <label for="ordem">Ordenar:</label>
+                <select name="" id="ordem">
+
+                    <option value="mais-recentes">Mais Recentes</option>
+                    <option value="mais-antigos">Mais antigos</option>
+                    <option value="maior-duracao">Maior Duração</option>
+                    <option value="menor-duracao">Menor Duração</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="list-trainer">
+
+            <div id="cards"></div>
+
+            <div id="semcard">
+                <p>Nenhum treino registrado ainda.</p>
+                <p>Adicione seu primeiro treino acima!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p> &copy Site desenvolvido por <strong>Júlio Monteiro</strong></p>
+    </footer>
+</body>
+</html>
