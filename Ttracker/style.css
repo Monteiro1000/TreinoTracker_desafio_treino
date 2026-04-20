@@ -56,3 +56,42 @@ header > div {
 header  i {
     color: white;
 }
+
+main {
+    
+}
+
+section#dados {
+    box-sizing: border-box;
+    max-height: 400px;
+    max-width: 1000px;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.sub-container-dados {
+    background-color: rgba(30, 143, 255, 0.247);
+    border-radius: 10px;
+    padding: 30px 100px;
+    flex: 1;
+}
+
+.quantidade {
+    color: #1b51c5;
+    font-family: var(--font);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.especificacao {
+    color: gray;
+    font-family: var(--font);
+    font-size: 12px;
+    text-align: center;
+}
