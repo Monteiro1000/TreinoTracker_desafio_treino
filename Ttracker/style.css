@@ -10,6 +10,7 @@
 }
 
 * {
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
@@ -62,7 +63,6 @@ main {
 }
 
 section#dados {
-    box-sizing: border-box;
     max-height: 400px;
     max-width: 1000px;
     display: flex;
@@ -94,4 +94,30 @@ section#dados {
     font-family: var(--font);
     font-size: 12px;
     text-align: center;
+}
+
+section#add-treinos {
+    max-width: 1000px;
+    background-color: rgba(30, 143, 255, 0.247);
+    border-radius: 10px;
+    flex: 1;
+    font-family: var(--font);
+    margin: auto;
+}
+
+#titulo-add-treinos{
+    color: white;
+    font-size: 1em;
+    padding: 30px 30px;
+}
+
+div#container-form-add {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+section div.grupoform {
+    
 }

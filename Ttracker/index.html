@@ -45,24 +45,36 @@
 
 
         <section id="add-treinos">
+    
+                <h1 id="titulo-add-treinos"> Novo Treino</h1>
+           
 
-            <label for="iexercicio">Exercício</label>
-            <input type="text" name="exercicio" id="iexercicio" placeholder="Ex: Corrida, Supino...">
-
-            <label for="tipo">Tipo</label>
-            <select name="" id="tipo">
-                <option value="">Selecione</option>
-                <option value="cardio">Cardio</option>
-                <option value="forca">Força</option>
-                <option value="flexibilidade">Flexibilidade</option>
-                <option value="hiit">Hiit</option>
-            </select>
-
-            <label for="duracao">Duração (min)</label>
-            <input type="number" name="" id="duracao" placeholder="30">
-
-            <label for="data">Data</label>
-            <input type="date" name="" id="data">
+            <form action="" method="post" id="form-addTreinos">
+                <div id="container-form-add">
+                    <div class="grupoform">
+                        <label for="iexercicio">Exercício</label>
+                        <input type="text" name="exercicio" id="iexercicio" placeholder="Ex: Corrida, Supino...">
+                    </div>
+                    <div class="grupoform">
+                        <label for="tipo">Tipo</label>
+                        <select name="" id="tipo">
+                            <option value="">Selecione</option>
+                            <option value="cardio">Cardio</option>
+                            <option value="forca">Força</option>
+                            <option value="flexibilidade">Flexibilidade</option>
+                            <option value="hiit">Hiit</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="duracao">Duração (min)</label>
+                        <input type="number" name="" id="duracao" placeholder="30">
+                    </div>
+                    <div class="grupoform">
+                        <label for="data">Data</label>
+                        <input type="date" name="" id="data">
+                    </div>
+                </div>
+            </form>
 
 
             <button id="adicionar"> <i class="fa-solid fa-list-check"></i> Adicionar Treino</button>
